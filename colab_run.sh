@@ -13,5 +13,5 @@ adduser --home /home/runner --gecos "" --shell /bin/bash --disabled-password run
 ./install-dir/bin/apptainer build pytorch_for_rl.sif docker://esppk/pytorch_for_rl:latest
 
 # run script with docker images
-sudo -u runner ./install-dir/bin/apptainer exec --bind /content/test:/mnt/data --nv pytorch_for_rl.sif python /mnt/data/research-on-RL/run.py
+sudo -u runner ./install-dir/bin/apptainer exec --bind /content:/mnt/data --nv pytorch_for_rl.sif python /mnt/data/YS-on-RL/run.py
 
